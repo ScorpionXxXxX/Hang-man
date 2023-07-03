@@ -1,0 +1,87 @@
+[
+    {
+        
+        "Movies": [
+            {
+                "The Mummy" : "./photos/movies/the mummy.jpg"
+            } , 
+            {
+                "Interstellar" : "./photos/movies/Interstellar.jpg"
+            } ,
+            {
+                "Jumanji" : "./photos/movies/jumanji.jpg"
+            },
+            {
+                "The Maze Runner" : "./photos/movies/The Maze Runner.webp"
+            },
+            {
+                "Titanic" : "./photos/movies/titanic.jpg"
+            },
+            {
+                "Harry Potter" : "./photos/movies/harry-potter.webp"
+            },
+            {
+                "Avatar" : "./photos/movies/avatar.jpg"
+            }
+        ],
+
+        "Countries":[
+            {
+                "Egypt" : "./photos/countries/egypt.png" 
+            },
+            {
+                "America": "./photos/countries/america.jpg"
+            } 
+            ,{
+                "Canada" : "./photos/countries/canada.png"
+            },
+            {
+                "russia" : "./photos/countries/russia.jpg"
+            },
+            {
+                "india" : "./photos/countries/india.png"
+            },
+            {
+                "Syria" : "./photos/countries/syria.avif"
+            }
+        ],
+        "Celebrities" : [
+            {
+                "Jessica Alba" : "./photos/celebrities/jessica alba.jpg"
+            },
+            {
+                "Chris Evans" : "./photos/celebrities/chris evans.jpg"
+            },
+            {
+                "Selena Gomes" : "./photos/celebrities/selena gomez.webp"
+            },
+            {
+                "Will Smith": "./photos/celebrities/Will smith.webp"
+            },
+            {
+                "Johnny Depp": "./photos/celebrities/johnny depp.jpg"
+            }
+        ],
+        "Historical Characters" : [
+            {
+                "Adolf Hetler" : "./photos/Historical Characters/hetler.jpg"
+            },
+            {
+                "Napoleon" : "./photos/Historical Characters/Napoleon.jpg"
+            },
+            {
+                "Shakespeare" : "./photos/Historical Characters/shakespeare.jpg"
+            },
+            {
+                "Mahatma Gandhi": "./photos/Historical Characters/mahatma gandhi.jpg"
+            },
+            {
+                "Nicola Tesla": "./photos/Historical Characters/nikola tesla.jpeg"
+            },
+            {
+                "Albert Einstein": "./photos/Historical Characters/albert einstein.webp"
+            }
+        ]
+
+    }
+]

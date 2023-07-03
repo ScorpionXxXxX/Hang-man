@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+        <link href="./all.min.css" rel="stylesheet">
+        <link href="./normalize.css" rel="stylesheet">
+        <title>Document</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <i class="fa-regular fa-skull"></i>
+                <div class="logo">Hang-Man</div>
+            </div>
+            <hr>
+            <div class="content">
+                <div class="category">Category : <span></span> </div>
+
+                <div class="box">
+                    <div class="draw">
+                        <div class="base"></div>
+                        <div class="stand"></div>
+                        <div class="hang"></div>
+                        <div class="rope"></div>
+
+                        <div class="man">
+                            <div class="head"></div>
+                            <div class="body"></div>
+                            <div class="hands"></div>
+                            <div class="legs"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="letters"></div>
+                    <div class="image"></div>
+                    
+                    <canvas id='myCanvas' width='1000' height='600'></canvas>
+                </div>
+                <div class="show-letters"></div>
+            </div>
+        </div>
+        <div class="popup">Game Over</div>
+        <audio src="./sounds/suddenly.mp3" class="success"></audio>
+        <audio src="./sounds/crow.mp3" class="failed"></audio>
+        <audio src="./sounds/game-over.mp3" class="game-over"></audio>
+        <audio src="./sounds/win.mp3" class="win"></audio>
+        <audio src="./sounds/fireworks.mp3" class="fireworks"></audio>
+
+        <script src="main.js" type="module"></script>
+    </body>
+</html>
