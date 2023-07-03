@@ -1,0 +1,540 @@
+:root {
+    --main-color: #222;
+    --main-width: 4px;
+}
+html{
+    background-image: url("./imgs/black-ravens-in-a-tree.gif");
+    background-size: cover;
+    position: relative;
+}
+body {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+@media (max-width: 767px) {
+    body {
+        height: 767px;
+        width:100%;
+    }
+}
+html::after {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(34, 34, 34, 0.7);
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+}
+@media (max-width: 767px) {
+    body::after {
+        width: 100%;
+            height: 100%;
+    }
+}
+hr {
+    opacity: 50%;
+    border-color: rgb(10, 114, 109);
+}
+.container {
+    margin: auto;
+    /* background-color: #eee; */
+    /* width:1200px; */
+    padding: 20px;
+    width: 1000px;
+    position: relative;
+    z-index: 1;
+}
+@media (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+}
+.container .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .container .header {
+        justify-content: center;
+    }
+}
+.container .header .logo {
+    font-family: 'Nosifer', cursive;
+    font-weight: bold;
+    font-size: 32px;
+    color: red;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .container .header .logo {
+        font-size: 18px;
+    }
+}
+.container .header i {
+    font-family: "FontAwesome";
+    font-weight: 900;
+    font-size: 28px;
+    color: red;
+    margin-right: 10px;
+}
+@media (max-width: 767px) {
+    .container .header i {
+        font-size: 18px;
+    }
+}
+.container .content {
+    position: relative;
+}
+.container .content .category {
+    text-align: right;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+@media (max-width: 767px) {
+    .container .content .category {
+        font-size: 16px;
+        text-align: center;
+    }
+}
+.container .content .category span {
+    color: #eb0845;
+}
+.container .content .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 600px;
+    gap: 0px;
+    width:100%;
+}
+.container .content .box .draw {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .content .box .draw .base {
+    position: absolute;
+    width: 100px;
+    height: var(--main-width);
+    background: var(--main-color);
+    top: 72px;
+    left: 101px;
+    display: none;
+    background-color: white;
+}
+@media (max-width: 767px) {
+    .container .content .box .draw .base {
+        width: 50px;
+        top: 57px;
+        left: 20px;
+    }
+}
+.container .content .box .draw.wrong-1 .base {
+    display: block;
+}
+.container .content .box .draw .stand {
+    position: absolute;
+    width: var(--main-width);
+    height: 350px;
+    background: var(--main-color);
+    top: -275px;
+    left: 150px;
+    background-color: white;
+    display: none;
+}
+@media (max-width: 767px) {
+    .container .content .box .draw .stand {
+        height: 175px;
+        left: 44px;
+        top: -116px;
+    }
+}
+.container .content .box .draw.wrong-2 .stand {
+    display: block;
+}
+.container .content .box .draw .hang {
+    position: absolute;
+    width: 80px;
+    height: var(--main-width);
+    background: var(--main-color);
+    top: -229px;
+    left: 151px;
+    background-color: white;
+    display: none;
+}
+@media (max-width: 767px) {
+    .container .content .box .draw .hang {
+        width: 40px;
+        top: -116px;
+        left: 48px;
+    }
+}
+.container .content .box .draw.wrong-3 .hang {
+    display: block;
+}
+.container .content .box .draw .hang::before {
+    content: " ";
+    position: absolute;
+    width: var(--main-width);
+    height: 30px;
+    background: var(--main-color);
+    top: 0px;
+    right: 0px;
+    background-color: white;
+}
+.container .content .box .draw .hang::after {
+    content: " ";
+    position: absolute;
+    width: 40px;
+    height: var(--main-width);
+    background: var(--main-color);
+    top: 13px;
+    right: 7px;
+    background-color: white;
+    transform: skew(-285deg) rotate(-30deg) translate(-36px, -3px);
+}
+.container .content .box .draw .rope {
+    position: absolute;
+    height: 20px;
+    top: -178px;
+    right: -230px;
+    border-right: var(--main-width) dashed #aaa;
+    display: none;
+}
+@media (max-width: 767px) {
+    .container .content .box .draw .rope {
+        width: 40px;
+        top: -67px;
+        left: 43px;
+    }
+}
+.container .content .box .draw.wrong-4 .rope {
+    display: block;
+}
+.container .content .box .draw .rope::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    border: var(--main-width) solid rgb(180, 180, 2);
+    top: 15px;
+    right: 4px;
+    border-radius: 50%;
+    transform: skew(19deg) rotate(-152deg) translate(-5px, 44px);
+}
+@media (max-width: 767px) {
+    .container .content .box .draw .rope::before {
+        width: 4px;
+        height: 18px;
+        border: 3px solid rgb(180, 180, 2);
+        top: 17px;
+        right: 5px;
+    }
+}
+.container .content .box .draw .rope::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    border: var(--main-width) dashed #aaa;
+    top: 6px;
+    right: -7px;
+    border-radius: 50%;
+    transform: skew(0deg, 40deg) rotate(11deg) translate(11px, 1px);
+}
+@media (max-width: 767px) {
+    .container .content .box .draw .rope::after {
+        width: 12px;
+        height: 30px;
+        top: 6px;
+        right: -3px;
+    }
+}
+.container .content .box .draw .man {
+    position: relative;
+}
+.container .content .box .draw .man .head {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: var(--main-width) solid white;
+    border-radius: 50%;
+    top: -141px;
+    right: -250px;
+    z-index: 5;
+    background-color: white;
+    display: none;
+}
+@media (max-width: 767px) {
+    .container .content .box .draw .man .head {
+        width: 10px;
+        height: 10px;
+        top: -34px;
+        right: -99px;
+    }
+}
+.container .content .box .draw.wrong-5 .head {
+    display: block;
+}
+.container .content .box .draw .man .head::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    border-top: var(--main-width) solid white;
+    border-radius: 50%;
+    top: 10px;
+    left: -9px;
+    z-index: 5;
+    transform: rotate(-63deg);
+}
+.container .content .box .draw .man .body {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: -130px;
+    right: -302px;
+    border-left: 5px solid white;
+    z-index: 5;
+    border-radius: 16px;
+    display: none;
+}
+@media (max-width: 767px) {
+    .container .content .box .draw .man .body {
+        width: 80px;
+        height: 50px;
+        top: -22px;
+        right: -158px;
+        border-left: 4px solid white;
+    }
+}
+.container .content .box .draw.wrong-6 .body {
+    display: block;
+}
+.container .content .box .draw .man .hands {
+    display: none;
+}
+.container .content .box .draw.wrong-7 .hands {
+    display: block;
+}
+.container .content .box .draw .man .hands::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 30px;
+    top: -109px;
+    right: -229px;
+    background-color: white;
+    transform: rotate(-30deg);
+}
+@media (max-width: 767px) {
+    .container .content .box .draw .man .hands::before {
+        width: 4px;
+        height: 17px;
+        top: -12px;
+        right: -86px;
+    }
+}
+.container .content .box .draw .man .hands::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 30px;
+    top: -107px;
+    right: -226px;
+    background-color: white;
+    transform: rotate(-14deg);
+}
+@media (max-width: 767px) {
+    .container .content .box .draw .man .hands::after {
+        width: 4px;
+        height: 17px;
+        top: -11px;
+        right: -83px;
+    }
+}
+.container .content .box .draw .man .legs {
+    display: none;
+}
+.container .content .box .draw.wrong-8 .legs {
+    display: block;
+}
+.container .content .box .draw .man .legs::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 30px;
+    top: -69px;
+    right: -219px;
+    background-color: white;
+    transform: rotate(8deg);
+}
+@media (max-width: 767px) {
+    .container .content .box .draw .man .legs::before {
+        width: 4px;
+        height: 17px;
+        top: 16px;
+        right: -78px;
+    }
+}
+.container .content .box .draw .man .legs::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 30px;
+    top: -68px;
+    right: -227px;
+    background-color: white;
+    transform: rotate(-20deg);
+}
+@media (max-width: 767px) {
+    .container .content .box .draw .man .legs::after {
+        width: 4px;
+        height: 17px;
+        top: 16px;
+        right: -82px;
+    }
+}
+.container .content .box .image {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    border-radius: 20px;
+    border: 10px solid transparent;
+    background: linear-gradient(45deg, black, rgb(10, 155, 148), black) border-box;
+    display: flex;
+    overflow: hidden;
+    top: 0px;
+    left: 400px;
+}
+@media (max-width: 767px) {
+    .container .content .box .image {
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+        border: 5px solid transparent;
+        top: 50px;
+        left: 130px;
+    }
+}
+.container .content .box .image img {
+    max-width: 100%;
+    max-height: 100%;
+    flex: 1;
+}
+.container .content .box .letters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    width: 300px;
+    position: absolute;
+    top: 130px;
+    right: 0px;
+}
+@media (max-width: 767px) {
+    .container .content .box .letters {
+        width: 180px;
+        top: 230px;
+        left: 170px;
+    }
+}
+.container .content .box .letters .letterSpan {
+    width: 20px;
+    height: 25px;
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(10, 155, 148);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .container .content .box .letters .letterSpan {
+        width: 10px;
+        height: 12px;
+        padding: 5px;
+        margin: 3px;
+        font-size: 13px;
+    }
+}
+.container .content .show-letters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container .content .show-letters .blankLetter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 3px solid white;
+    height: 20px;
+    font-size: 24px;
+    color: white;
+}
+@media (max-width: 767px) {
+    .container .content .show-letters .blankLetter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        border-bottom: 2px solid white;
+        height: 15px;
+        font-size: 18px;
+        color: white;
+    }
+}
+.popup{
+    background-image:url('./imgs/finished.jpg');
+    font-family: 'Nosifer', cursive;
+    background-size:cover;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    left:350px;
+    top:50px;
+    border-radius:20px;
+    z-index:888;
+    width:700px;
+    height:600px;
+    color:red;
+    font-size:32px;
+    font-weight:bold;
+    border:none;
+    display: none;
+}
+@media (max-width: 767px) {
+    .popup {
+        left:50%;
+        top: 50%;
+        transform: translate(-50% , -70%);
+        width: 300px;
+        height: 250px;
+        font-size: 18px;
+    }
+}
+@media (max-width: 767px) {
+    #myCanvas {
+        width: 300px;
+        height: 290px;
+    }
+}
